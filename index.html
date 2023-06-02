@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI conference</title>
+<link rel="stylesheet" href="style.css">
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="app.js" defer></script>
+
+<header>
+    <nav id="nav">
+        <ul>
+            <li><a href="#about" data-text="about">about</a></li>
+            <li><a href="#timetable" data-text="program">program</a></li>
+            <li><a href="#team" data-text="team">team</a></li>
+            <li><a href="#location" data-text="location">location</a></li>
+            <li><a href="#contact" data-text="contact">contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <div id="title">
+        <div>
+            <h1>The Future is Now</h1>
+            <p id="subtitle">School of Media and IT Mini Conference in AI</p>
+            <p id="date">26 . 5 . 2023 / 9:00am – 18:00pm</p>
+        </div>
+    </div>
+
+    <div id="button">
+        <button type="button" onclick="location.href='#join'">Join now</button>
+    </div>
+
+    <div class="arrow">
+        <i class='bx bx-chevron-down bx-fade-down'></i>
+    </div>
+
+</header>
+
+<section id="about">
+
+    <div><img src="media/conference.jpg"></div>
+    <div id="about_p">
+        <h2>A new way to <br>think and create with AI</h2>
+        <p>Explore the diverse applications of AI, the challenges and opportunities that come with its development,
+            and
+            how it can be leveraged to make a positive impact on society. We look forward to engaging in meaningful
+            conversations that will further the progress of AI and its potential to shape the future.
+        </p>
+    </div>
+
+</section>
+
+<div class="rectangle"></div>
+
+<section id="timetable">
+    <h2>Program</h2>
+    <div>
+
+        <div id="time">
+            <ol>
+                <li>8:00 - 9:00</li>
+                <li>9:00 - 9:30</li>
+                <li>9:30 - 10:30</li>
+                <li>10:30 - 11:30</li>
+                <li>11:30 - 12:30</li>
+                <li>12:30 - 13:30</li>
+                <li>13:30 - 14:30</li>
+                <li>14:30 - 15:30</li>
+                <li>15:30 - 16:30</li>
+                <li>16:30 - 17:30</li>
+                <li>17:30 - 18:00</li>
+            </ol>
+        </div>
+
+        <div id="program">
+
+            <ol>
+                <li>Doors open and registration</li>
+                <li>Opening remarks</li>
+                <li>Mark Anderson: Introduction to AI</li>
+                <li>Sarah Johnson: AI Applications in Healthcare</li>
+                <li>Workshop 1: Developing AI Algorithms</li>
+                <li class="lunch">Lunch</li>
+                <li>Jennifer Williams: Machine Learning</li>
+                <li>Andrew Smith: Natural Language Processing</li>
+                <li>Workshop 2: Implementing AI in Business</li>
+                <li>Rebecca Jones: AI and the Future</li>
+                <li>Closing remarks and networking</li>
+            </ol>
+        </div>
+    </div>
+
+
+</section>
+
+<section id="team">
+    <h2>Team</h2>
+
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <input type="radio" name="slide" id="slide05">
+
+        <div class="slidewrap">
+            <ul class="slidelist">
+                <li>
+                    <a>
+                        <div class="slide-content">
+                            <img src="media/Mark-Anderson.jpg">
+                            <div class="bio">
+                                <i class='bx bxs-quote-alt-left'></i>
+                                <p>Hi everyone!I'm an AI consultant and expert trainer with a passion for
+                                    teaching people about the amazing world of AI. In my presentation,
+                                    "Introduction to AI:Understanding the Fundamentals and Potential
+                                    Applications," I'll be breaking down the basics of AI and exploring its many
+                                    exciting possibilities.</p>
+                                <div class="quote_right">
+                                    <i class='bx bxs-quote-alt-right'></i>
+                                </div>
+                                <span class="speaker">By Mark Anderson</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="slide-content">
+                            <img src="media/Sarah-Johnson.jpg">
+                            <div class="bio">
+                                <i class='bx bxs-quote-alt-left'></i>
+                                <p>Hey there, fellow tech enthusiasts! As a healthcare data scientist and AI
+                                    enthusiast, I'm thrilled to be presenting on "AI Applications in Healthcare:
+                                    Current Use Cases and Future Possibilities." In my talk, I'll be sharing some of
+                                    the amazing ways that AI is already transforming the medical industry and
+                                    looking ahead to what's possible in the future.</p>
+                                <div class="quote_right">
+                                    <i class='bx bxs-quote-alt-right'></i>
+                                </div>
+                                <span class="speaker">By Sarah Johnson</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="slide-content">
+                            <img src="media/Jennifer-Williams.jpg">
+                            <div class="bio">
+                                <i class='bx bxs-quote-alt-left'></i>
+                                <p>Hello, everyone! I'm a machine learning engineer and coding expert, and I'm
+                                    excited to share my knowledge with you in my presentation, "Machine
+                                    Learning: Techniques, Challenges, and Best Practices." Whether you're a
+                                    seasoned pro or just starting out, my talk will provide some valuable insights
+                                    into the world of ML.</p>
+                                <div class="quote_right">
+                                    <i class='bx bxs-quote-alt-right'></i>
+                                </div>
+                                <span class="speaker">By Jennifer Williams</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="slide-content">
+                            <img src="media/Andrew-Smith.jpg">
+                            <div class="bio">
+                                <i class='bx bxs-quote-alt-left'></i>
+                                <p>Hi, folks! I'm a natural language processing (NLP) specialist and language
+                                    geek who's passionate about helping people communicate better with AI.
+                                    In my presentation, "NLP: From Text Data to Insights," I'll be exploring some
+                                    of the fascinating ways that NLP can be used to extract insights from text data.</p>
+                                <div class="quote_right">
+                                    <i class='bx bxs-quote-alt-right'></i>
+                                </div>
+                                <span class="speaker">By Andrew Smith</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="slide-content">
+                            <img src="media/Rebecca-Jones.jpg">
+                            <div class="bio">
+                                <i class='bx bxs-quote-alt-left'></i>
+                                <p> Hey there, tech visionaries! As an AI futurist and strategy consultant,
+                                    I'm excited to be presenting on "AI and the Future: Opportunities, Risks, and
+                                    Ethical Considerations." In my talk, I'll be looking ahead to the exciting
+                                    possibilities and potential risks of AI, and exploring some of the ethical
+                                    considerations we need to keep in mind as we shape the future of technology.</p>
+                                <div class="quote_right">
+                                    <i class='bx bxs-quote-alt-right'></i>
+                                </div>
+                                <span class="speaker">By Rebecca Jones</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <div class="slide-control">
+                    <div class="control01">
+                        <label for="slide05" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                    </div>
+                    <div class="control02">
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                    </div>
+                    <div class="control03">
+                        <label for="slide02" class="left"></label>
+                        <label for="slide04" class="right"></label>
+                    </div>
+                    <div class="control04">
+                        <label for="slide03" class="left"></label>
+                        <label for="slide05" class="right"></label>
+                    </div>
+                    <div class="control05">
+                        <label for="slide04" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="location">
+
+    <h2>Location</h2>
+    <div id="map"></div>
+
+
+</section>
+
+<section id="join">
+
+    <div>
+        <h2>Register now to join <br>the AI conference in PCU!</h2>
+        <p>Fill out to ther form to get your invitation</p>
+    </div>
+
+    <form id="form">
+
+        <div>
+            <label for="name">Name</label>
+            <input name="name" id="name" required placeholder="Enter name here"></textarea>
+        </div>
+
+        <div>
+            <label for="'email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Enter email here">
+        </div>
+
+        <div id="subscribe">
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </form>
+
+</section>
+
+
+<footer id="contact">
+
+    <div id="footer_top">
+        <p><a href="#top" data-text="Back to top">Back to top</a></p>
+
+        <div id="nav2">
+            <ul>
+                <li><a href="#about" data-text="about">about</a></li>
+                <li><a href="#timetable" data-text="program">program</a></li>
+                <li><a href="#team" data-text="team">team</a></li>
+                <li><a href="#location" data-text="location">location</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="footer_bot">
+        <a href="https://www.praguecityuniversity.cz/"><img id="logo"
+                src="https://www.praguecityuniversity.cz/hs-fs/hubfs/PCU_LOGO_web-white.png?width=2334&name=PCU_LOGO_web-white.png"></a>
+
+        <div id="link">
+            <ul>
+                <li><a href="https://www.facebook.com/PragueCityUniversity"><img src="media/facebook-4-32.png"></a></li>
+                <li><a href="https://www.instagram.com/praguecityuniversity/"><img src="media/instagram-5-32.png"></a>
+                </li>
+                <li><a href="https://twitter.com/PragueCityUni"><img src="media/twitter-4-32.png"></a></li>
+                <li><a href="https://www.linkedin.com/school/prague-city-university/"><img
+                            src="media/linkedin-4-32.png"></a>
+                </li>
+                <li><a href="https://www.youtube.com/channel/UCtJM41jXN0JSVFM2pxuAzGw"><img
+                            src="media/youtube-4-32.png"></a>
+                </li>
+                <li><a href="https://www.flickr.com/photos/praguecityuniversity/albums"><img
+                            src="media/flickr-4-32.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+
+<div class="cursor"></div>
