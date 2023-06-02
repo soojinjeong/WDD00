@@ -49,6 +49,7 @@ header {
     border-radius: 0px 0px 50px 50px;
     background-size: 400% 400%;
     animation: animate 15s ease infinite;
+    /* give animation to backgroud gradient */
 }
 
 @keyframes animate {
@@ -105,7 +106,9 @@ nav a {
 
 nav a:before {
     content: attr(data-text);
+    /* data-text which is same letter as nav */
     position: absolute;
+    /*using position: absolute to appear above the original letter */
     left: 0;
     top: 0;
     text-decoration: underline;
@@ -121,6 +124,7 @@ nav a:hover:before {
 
 #ham {
     display: none;
+    /* hide it in full screen */
 }
 
 @media (max-width:1200px) {
@@ -147,6 +151,8 @@ nav a:hover:before {
         z-index: 99;
     }
 
+    /* definition of hamburger size */
+
     #ham>span {
         display: block;
         height: 3px;
@@ -156,6 +162,8 @@ nav a:hover:before {
         position: absolute;
         transition: all 0.3s ease-out;
     }
+
+    /* definition of hamburger line size */
 
     #ham>span:nth-child(1) {
         top: 0;
@@ -194,6 +202,7 @@ nav a:hover:before {
     nav {
         opacity: 0;
         visibility: hidden;
+        /* nav is not showing as same as full screen */
         transition: opacity 0.3s;
         position: relative;
     }
@@ -202,6 +211,7 @@ nav a:hover:before {
     nav.open {
         opacity: 1;
         visibility: visible;
+        /* nav is showing when we click the hamburger */
         background-color: rgba(0, 0, 0, 0.5);
         height: 100vh;
         display: flex;
@@ -228,6 +238,8 @@ nav a:hover:before {
         transform: scale(1.2);
         color: rgb(90, 87, 255);
     }
+
+    /* give aninmation for nav a */
 
     nav a:before {
         display: none;
@@ -266,6 +278,8 @@ nav a:hover:before {
     color: #ffffff;
 }
 
+/* give transition for button */
+
 .arrow {
     display: flex;
     justify-content: center;
@@ -284,6 +298,7 @@ nav a:hover:before {
     margin: 4rem;
     gap: 4rem;
     transform: translate(0, 15rem);
+    /* comes up from 15rem below */
     opacity: 0;
     transition: transform 1s;
 }
@@ -312,6 +327,7 @@ nav a:hover:before {
     #about {
         display: flex;
         flex-direction: column;
+        /* change direction */
     }
 
     #about img {
@@ -322,12 +338,19 @@ nav a:hover:before {
 
 }
 
+@media (max-width: 600px) {
+    #about {
+        padding: 0;
+    }
+}
+
 #timetable {
     background: linear-gradient(45deg, rgb(42, 65, 150), rgb(128, 112, 192), rgb(220, 171, 233));
     height: 100vh;
     margin-bottom: 4rem;
     background-size: 400% 400%;
     animation: animate 15s ease infinite;
+    /* give animation to backgroud gradient */
 }
 
 #timetable>div {
@@ -382,6 +405,8 @@ nav a:hover:before {
     width: 50%;
 }
 
+/* make lines around "lunch" */
+
 .lunch:before {
     right: 0.5em;
     margin-left: -50%;
@@ -435,18 +460,23 @@ nav a:hover:before {
     display: none;
 }
 
+/* hide bullet point for radio */
+
 .section .slidewrap {
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    /* hide slides which are not on the screen */
 }
 
 .section .slidelist {
     white-space: nowrap;
+    /* make slides to 1 vertical line */
 }
 
 .section .slidelist>li {
     display: inline-block;
+    /* make slides to 1 vertical line */
     vertical-align: middle;
     width: 100%;
     transition: all .5s;
@@ -470,6 +500,7 @@ nav a:hover:before {
     content: attr(data-text);
     background-color: rgba(4, 0, 252, 0.277);
     border-radius: 50%;
+    /* when it's hovered, the background is appeared */
 }
 
 .section .slidelist .left {
@@ -522,6 +553,7 @@ nav a:hover:before {
     float: right;
 }
 
+/* the screen will be move to translateX()*/
 .section [id="slide01"]:checked~.slidewrap .slidelist>li {
     transform: translateX(0%);
 }
@@ -546,6 +578,7 @@ nav a:hover:before {
     display: none;
 }
 
+/* control label is staying in position until slides are sliding */
 .section [id="slide01"]:checked~.slidewrap .control01 {
     display: block;
 }
@@ -576,6 +609,7 @@ nav a:hover:before {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        /* change to column position */
         text-align: center;
         row-gap: 30px;
     }
@@ -595,6 +629,8 @@ nav a:hover:before {
     .quote_right {
         float: none;
     }
+
+    /* right side quote is in center */
 }
 
 @media (max-width: 600px) {
@@ -620,10 +656,12 @@ nav a:hover:before {
     color: rgb(4, 0, 252);
 }
 
+/*define the map size */
 #map {
     height: 80vh;
 }
 
+/* show marker */
 #marker {
     height: 16px;
     width: 16px;
@@ -677,6 +715,7 @@ nav a:hover:before {
     transition: .3s ease-in-out;
 }
 
+/* when hover on name and email box, background color change*/
 #name:hover {
     background-color: #cbcbcb;
 }
@@ -716,6 +755,7 @@ nav a:hover:before {
     transition: 0.3s ease-in-out;
 }
 
+/*when hover on submit button, color change */
 #submit:hover {
     color: white;
     background: rgb(4, 0, 252);
@@ -759,6 +799,26 @@ nav a:hover:before {
     }
 }
 
+@media (max-width: 600px) {
+    #join {
+        padding: 2rem;
+    }
+
+    #join h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #name,
+    #email {
+        width: 15rem;
+    }
+
+    #submit {
+        padding: 0.8rem;
+        font-size: 0.5rem;
+    }
+}
 
 footer {
     background: rgb(18, 36, 99);
@@ -875,6 +935,7 @@ footer {
 
 }
 
+/* change cursor*/
 .cursor {
     position: absolute;
     left: 0;
@@ -911,6 +972,7 @@ footer {
     transform: scale(0);
 }
 
+/* animation for click event */
 .cursor::before {
     background-color: #949494;
 }
